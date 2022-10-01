@@ -33,3 +33,6 @@ npm-debug.log
 /assets/node_modules/
 
 .DS_Store
+
+app/_build
+app/deps
