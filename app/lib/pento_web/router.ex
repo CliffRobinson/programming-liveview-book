@@ -20,7 +20,7 @@ defmodule PentoWeb.Router do
   scope "/", PentoWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    # get "/", PageController, :index
   end
 
   # Other scopes may use custom stacks.
@@ -70,6 +70,8 @@ defmodule PentoWeb.Router do
     post "/users/reset_password", UserResetPasswordController, :create
     get "/users/reset_password/:token", UserResetPasswordController, :edit
     put "/users/reset_password/:token", UserResetPasswordController, :update
+
+    get "/", PageController, :index
   end
 
   scope "/", PentoWeb do
