@@ -350,4 +350,10 @@ defmodule Pento.Accounts do
       {:error, :user, changeset, _} -> {:error, changeset}
     end
   end
+
+  def markdown_product(%{unit_price: unit_price} = product, discount_amount) do
+    markdown_price = unit_price - discount_amount
+
+    Pento.Catalog.Product.reduce_price_changeset(product, %{unit_price: markdown_price})
+  end
 end
