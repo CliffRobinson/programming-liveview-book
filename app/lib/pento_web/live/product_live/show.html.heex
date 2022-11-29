@@ -35,6 +35,11 @@
     <%= @product.sku %>
   </li>
 
+    <li>
+    <strong>Message:</strong>
+    <%= @message %>
+  </li>
+
 </ul>
 
 <span><%= live_patch "Edit", to: Routes.product_show_path(@socket, :edit, @product), class: "button" %></span> |
